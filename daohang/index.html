@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memory</title>
+    <!-- ··························· 引入插件 ··························· -->
+    <!-- jquery -->
+    <!-- <script src="src/jquery-3.3.1.min.js"></script> -->
+    <!-- ······························································· -->
+
+    <!-- 上面的插件内容不要改，以下是自己自定义的CSS样式。 -->
+    <link rel="stylesheet" href="style/demo.css">
+    <!-- ······························································ -->
+</head>
+
+<body>
+    <div id="body">
+        <!-- ````````````````````````````````````` 搜索区域 ````````````````````````````````````` -->
+        <div class="search">
+            <div class="logo">
+                <img src="image/logo.gif" width="120">
+            </div>
+
+            <!-- 搜索引擎部分 -->
+            <form id="search_form" onsubmit="return search()">
+                <!-- 搜索输入框 -->
+                <div class="import">
+                    <input id="search_input" class="search" type="text" value="" onkeyup="get_suggest()" onfocus="get_suggest()" onpaste="get_suggest()" autocomplete="off" placeholder="请输入你要搜索的内容">
+                    <input type="submit" id="search_submit" value="→">
+                </div>
+
+                <i id="clear" onclick="clear_seach()"></i>
+                <div id="suggest" style="display:none;">
+                    <ul id="suglist"></ul>
+                    <div class="close" onclick="close_sug()">| 收起</div>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="label">
+            <div class="box">
+                <a href="https://www.baidu.com"></a>
+                <img class="icon" src="image/Baidu.png">
+                <p class="url">百度搜索</p>
+            </div>
+			<div class="box">
+                <a href="http://www.google.com"></a>
+                <img class="icon" src="image/guge.png">
+                <p class="url">谷歌搜索</p>
+            </div>
+			<div class="box">
+                <a href="history://"></a>
+                <img class="icon" src="image/lishi.png">
+                <p class="url">历史记录</p>
+            </div>
+
+            <div class="box">
+                <a href="folder://"></a>
+                <img class="icon" src="image/shuqian.png">
+                <p class="url">我的收藏</p>
+            </div>
+
+            <div class="box">
+                <a href="http://www.17500.cn"></a>
+                <img class="icon" src="image/lecai.png">
+                <p class="url">乐彩彩票</p>
+            </div>
+			
+        </div>
+
+        <!-- ````````````````````````````````````` 固定文字 ````````````````````````````````````` -->
+        <div class="lwlhitokoto">
+            <p>―·❀·―</p>
+			<p>从来酿酒的人 分外清醒 独善其身</p>
+        </div>
+    </div>
+    <!-- ````````````````````````````````````` 核心js ````````````````````````````````````` -->
+    <script type="text/javascript" src="javascript/demo.js"></script>
+</body>
+
+</html>
